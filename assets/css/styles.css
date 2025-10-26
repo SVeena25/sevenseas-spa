@@ -30,9 +30,7 @@ h1, h2, h3, h4, h5, h6 {
    Note: path is relative to this CSS file (assets/css/styles.css) -> ../images/hero.png
 */
 .hero {
-    /* GitHub Pages: use repo-root absolute path so file is found reliably */
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-                url('/sevenseas-spa/assets/images/hero.png') center/cover no-repeat;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/hero.png') center/cover no-repeat;
     /* avoid fixed attachment on mobile browsers */
     background-attachment: scroll;
     color: #FFEBD4;
