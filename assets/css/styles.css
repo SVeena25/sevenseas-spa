@@ -1,22 +1,19 @@
-/* Headings */
+
+/* Apply the Handlee font to all headings */
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Handlee', cursive;
 }
 
-/* Navbar colors */
 .navbar-custom {
     color: #3B2F2F;
 }
 
-.navbar-custom .navbar-brand,
 .navbar-custom .nav-link {
-    color: #3B2F2F !important;
+    color: #3B2F2F;
 }
 
-/* Active link: bolder and same brand color */
 .navbar-custom .nav-link.active {
-    color: #3B2F2F !important;
-    font-weight: 700;
+    font-weight: bold;
 }
 
 /* Make the navbar sticky */
@@ -26,30 +23,31 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 1000;
 }
 
-/* Style the hero section
-   Note: path is relative to this CSS file (assets/css/styles.css) -> ../images/hero.png
-*/
+/* Style the hero section */
 .hero {
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/hero.png') center/cover no-repeat;
-    /* avoid fixed attachment on mobile browsers */
-    background-attachment: scroll;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/hero.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     color: #FFEBD4;
     padding: 8rem 0;
 }
 
-/* Page layout */
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-/* Content spacing */
+/* 
+This CSS rule adds padding to the left and right of the body and main elements. 
+This ensures that the content is not right up against the viewport on small screens.
+*/
 main {
     margin: 2rem 0;
 }
 
-/* Footer */
+/* Style the footer */
 .footer {
     margin-top: auto;
     background-color: #6F4E37;
@@ -60,7 +58,15 @@ main {
     color: #FFEBD4;
 }
 
-/* Service cards */
+/* Highlight the active nav link */
+.nav-item.active .nav-link {
+    color: #000000;
+    /* Change to the color you want */
+    font-weight: bolder;
+    /* Makes the text bold */
+}
+
+/* Style the service cards */
 .card {
     border: none;
 }
@@ -70,18 +76,14 @@ main {
     object-fit: cover;
 }
 
-/* Testimonial image */
+/* Set the size of the testimonial images */
 .testimonial-image {
     width: 100px;
     height: 100px;
 }
 
-/* Rounded image utility */
+/* Applies rounded corners to images with the 'rounded-image' class. Adjust the border-radius value to control the roundness. */
 .rounded-image {
     border-radius: 15px;
+    /* Adjust the px value as needed */
 }
-
-/* Remove conflicting/unused selector that previously overrode active link styles:
-   .nav-item.active .nav-link { ... }
-   (kept removed to avoid unexpected black color)
-*/
